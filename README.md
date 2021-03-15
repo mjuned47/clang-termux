@@ -32,7 +32,7 @@ Clang-13 for AARCH64/ARM64
    -DCMAKE_INSTALL_PREFIX=(Installation Path) 
    -DCMAKE_BUILD_TYPE=Release 
    -DLLVM_TARGETS_TO_BUILD=AArch64 
-   -DCMAKE_C_FLAGS="-fPIE -flto -Os" 
+   -DCMAKE_C_FLAGS="-fPIE -Os" 
    -DCMAKE_CROSSCOMPILING=True 
    -DLLVM_TARGET_ARCH=AArch64 
    -DLLVM_ENABLE_PIC=False 
@@ -41,7 +41,7 @@ Clang-13 for AARCH64/ARM64
    -DCMAKE_CXX_COMPILER=(Installed NDK Path)/bin/aarch64-linux-android-g++ 
    -DLLVM_TABLEGEN=(Path)/llvm-tblgen 
    -DCLANG_TABLEGEN=(Path)/clang-tblgen 
-   -DCMAKE_CXX_FLAGS_RELEASE="-Os -flto=full"
+   -DCMAKE_CXX_FLAGS_RELEASE="-Os"
 
 8) ninja -C build -j(no. of cores)
    For example: ... -j4
