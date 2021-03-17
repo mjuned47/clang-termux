@@ -674,7 +674,9 @@ def base_cmake_defines(dirs):
         'LLVM_INCLUDE_EXAMPLES': 'OFF',
 	'LLVM_TABLEGEN' : '/home/runner/llvm-tblgen' ,
         'CLANG_TABLEGEN' : '/home/runner/clang-tblgen' ,
-    }
+        'CMAKE_C_COMPILER' : '/home/runner/clang/bin/aarch64-linux-android-gcc' ,
+        'CMAKE_CXX_COMPILER' : '/home/runner/clang/bin/aarch64-linux-android-g++' ,
+   }
     # yapf: enable
 
     return defines
@@ -722,13 +724,6 @@ def cc_ld_cmake_defines(dirs, env_vars, stage):
     # bfd plugin: LLVM gold plugin has failed to create LTO module: Unknown attribute kind (60) (Producer: 'LLVM9.0.0svn' Reader: 'LLVM 8.0.0')
     if ar:
         defines['CMAKE_AR'] = ar
-
-    # The C compiler to use
-    defines['CMAKE_C_COMPILER'] = cc
-
-
-    # The C++ compiler to use
-    defines['CMAKE_CXX_COMPILER'] = cxx
 
     # If we have a linker, use it
     if ld:
