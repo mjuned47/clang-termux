@@ -676,6 +676,7 @@ def base_cmake_defines(dirs):
         'CLANG_TABLEGEN' : '/home/runner/clang-tblgen' ,
         'CMAKE_C_COMPILER' : '/home/runner/clang/bin/aarch64-linux-android-gcc' ,
         'CMAKE_CXX_COMPILER' : '/home/runner/clang/bin/aarch64-linux-android-g++' ,
+        'COMPILER_RT_BUILD_MEMPROF' : 'OFF' ,
    }
     # yapf: enable
 
