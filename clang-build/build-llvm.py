@@ -672,10 +672,14 @@ def base_cmake_defines(dirs):
         'LLVM_INCLUDE_DOCS': 'OFF',
         # Don't include example build targets to save on cmake cycles
         'LLVM_INCLUDE_EXAMPLES': 'OFF',
-	'LLVM_TABLEGEN' : '/home/runner/llvm-tblgen' ,
-        'CLANG_TABLEGEN' : '/home/runner/clang-tblgen' ,
-        'CMAKE_C_COMPILER' : '/home/runner/clang/bin/aarch64-linux-android-gcc' ,
-        'CMAKE_CXX_COMPILER' : '/home/runner/clang/bin/aarch64-linux-android-g++' ,
+	'LLVM_TABLEGEN': '/home/runner/llvm-tblgen' ,
+        'CLANG_TABLEGEN': '/home/runner/clang-tblgen' ,
+        'CMAKE_C_COMPILER': '/home/runner/clang/bin/aarch64-linux-android-gcc' ,
+        'CMAKE_CXX_COMPILER': '/home/runner/clang/bin/aarch64-linux-android-g++' ,
+        'CMAKE_CROSSCOMPILING': 'True' ,
+        'LLVM_TARGET_ARCH': 'AArch64' ,
+        'LLVM_DEFAULT_TARGET_TRIPLE': 'aarch64-linux-android' ,
+        'LLVM_TARGETS_TO_BUILD': 'AArch64' ,
    }
     # yapf: enable
 
