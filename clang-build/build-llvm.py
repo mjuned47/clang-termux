@@ -676,7 +676,6 @@ def base_cmake_defines(dirs):
         'CLANG_TABLEGEN' : '/home/runner/clang-tblgen' ,
         'CMAKE_C_COMPILER' : '/home/runner/clang/bin/aarch64-linux-android-gcc' ,
         'CMAKE_CXX_COMPILER' : '/home/runner/clang/bin/aarch64-linux-android-g++' ,
-        'COMPILER_RT_BUILD_MEMPROF' : 'OFF' ,
    }
     # yapf: enable
 
@@ -773,6 +772,7 @@ def project_target_cmake_defines(args, stage):
         defines['COMPILER_RT_BUILD_BUILTINS'] = 'OFF'
         defines['COMPILER_RT_BUILD_CRT'] = 'OFF'
         defines['COMPILER_RT_BUILD_XRAY'] = 'OFF'
+        defines['COMPILER_RT_BUILD_MEMPROF'] = 'OFF'
         # We don't need the sanitizers for the stage 1 bootstrap
         if bootstrap_stage(args, stage):
             defines['COMPILER_RT_BUILD_SANITIZERS'] = 'OFF'
