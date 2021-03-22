@@ -19,10 +19,10 @@ Clang-13 for AARCH64/ARM64
    sudo apt install cmake ninja-build -y
    (Install other dependency if needed)
 
-5) Download clang-tblgen and llvm-tblgen from clang-build folder
+5) Download clang-tblgen-13 and llvm-tblgen-13 from clang-build folder
    Of this repository
    Then make it executable :
-   chmod +x clang-tblgen llvm-tblgen
+   chmod +x clang-tblgen-13 llvm-tblgen-13
 
 6) export PATH=$PATH:(Installed NDK Path)/bin
 
@@ -39,8 +39,8 @@ Clang-13 for AARCH64/ARM64
    -DLLVM_DEFAULT_TARGET_TRIPLE=aarch64-linux-android-gcc 
    -DCMAKE_C_COMPILER=(Installed NDK Path)/bin/aarch64-linux-android-gcc 
    -DCMAKE_CXX_COMPILER=(Installed NDK Path)/bin/aarch64-linux-android-g++ 
-   -DLLVM_TABLEGEN=(Path)/llvm-tblgen 
-   -DCLANG_TABLEGEN=(Path)/clang-tblgen 
+   -DLLVM_TABLEGEN=(Path)/llvm-tblgen-13 
+   -DCLANG_TABLEGEN=(Path)/clang-tblgen-13 
    -DCMAKE_CXX_FLAGS_RELEASE="-Os"
 
 8) ninja -C build -j(no. of cores)
